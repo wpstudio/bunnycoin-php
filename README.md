@@ -26,7 +26,7 @@ $config = array(
     'user' => 'bunnycoinrpc',
     'pass' => '--password--',
     'host' => '127.0.0.1',
-    'port' => '48445' );
+    'port' => '48444' );
 
 // create client conncetion
 $bunny = new Bunny( $config );

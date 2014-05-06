@@ -89,7 +89,7 @@ class Bunny  {
      * @param string $account account string
      */
     function set_account( $address, $account ) {
-        return $this->client->setaccount();
+        return $this->client->setaccount($address, $account);
     }
 
 

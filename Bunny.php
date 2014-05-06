@@ -12,7 +12,7 @@
  * License : GPL vv
  */ 
 
-require dirname(  __FILE__ ) . '/jsonRPCClient.php';
+require_once dirname(  __FILE__ ) . '/jsonRPCClient.php';
 
 class Bunny  {
 
@@ -103,6 +103,13 @@ class Bunny  {
         return $this->client->getbalance( $account, $minconf );
     }
 
+
+    /**
+     * Get details of transaction
+     */
+     function get_transaction( $txid ) {
+        return $this->client->gettransaction( $txid );
+     }
 
     /**
      * Move coins from one account on wallet to another

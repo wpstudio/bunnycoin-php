@@ -99,8 +99,8 @@ class Bunny  {
      * @param string $account account name
      * @return float account balance
      */
-    function get_balance( $account ) {
-        return $this->client->getbalance( $account );
+    function get_balance( $account, $minconf=1 ) {
+        return $this->client->getbalance( $account, $minconf );
     }
 
 
@@ -126,7 +126,7 @@ class Bunny  {
      * @param float $amount amount of coins to send
      * @return string txid
      */
-    function send() {
+    function send( $account, $to_address, $amount ) {
         $txid = $this->client->sendfrom( $account, $to_address, $amount );  
         return $txid;
     }
@@ -148,4 +148,11 @@ class Bunny  {
       function list_transactions ( $account ) {
           return $this->client->listtransactions($account);
       }
+      
+     /**
+      * Validate Address
+      */
+      function validate_address( $address ) {
+		return $this->client->validateaddress($address);
+	}
 }

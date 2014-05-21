@@ -12,7 +12,7 @@ I plan to expand upon the end points of the API.  Right now accounts and movemen
 
 Requires **bunnycoind** to already be installed and running on your local server or reachable by your server.  
 
-Get leafcoin source from: https://github.com/bunnycoin/bunnycoin
+Get bunnycoin source from: https://github.com/bunnycoin/bunnycoin
 
 
 ## Usage:
